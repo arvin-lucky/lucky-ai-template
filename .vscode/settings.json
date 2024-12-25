@@ -1,16 +1,28 @@
+// {
+//     "editor.formatOnSave": true,
+//     "editor.defaultFormatter": "esbenp.prettier-vscode", // 使用 Prettier 作为默认格式化工具
+//     "editor.codeActionsOnSave": {
+//       "source.fixAll": "always", // 自动修复所有代码问题，包括 ESLint 的问题
+//       "source.fixAll.eslint": "explicit" // 优先使用 ESLint 的修复
+//     },
+//     "eslint.validate": [
+//       "javascript",
+//       "javascriptreact",
+//       "typescript",
+//       "typescriptreact"
+//     ],
+//     "files.eol": "\n" // 确保统一使用 LF 作为换行符
+//   }
 {
-  "diffEditor.wordWrap": "inherit",
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 120,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "files.autoSave": "onWindowChange",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.fixAll.eslint": "explicit"
-    },
+	"diffEditor.wordWrap": "inherit",
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 100,
+	"editor.rulers": [80, 120],
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.autoSave": "onWindowChange",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit", // 优先使用 ESLint 的修复
+		"source.fixAll.eslint": "explicit" // 优先使用 ESLint 的修复
+	}
 }

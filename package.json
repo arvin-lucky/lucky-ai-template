@@ -7,9 +7,14 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"prepare": "husky"
+		"prepare": "husky",
+		"format": "lint-staged"
 	},
 	"dependencies": {
+		"@ant-design/icons": "^5.5.2",
+		"@ant-design/nextjs-registry": "^1.0.2",
+		"@ant-design/x": "^1.0.3",
+		"antd": "^5.22.6",
 		"next": "15.1.2",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
@@ -18,19 +23,33 @@
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@eslint/eslintrc": "^3",
+		"@next/eslint-plugin-next": "^15.1.2",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"eslint": "^9",
+		"eslint": "^9.17.0",
 		"eslint-config-next": "15.1.2",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.2.11",
 		"prettier": "^3.4.2",
-		"typescript": "^5"
+		"typescript": "^5",
+		"typescript-eslint": "^8.18.2"
 	},
 	"lint-staged": {
-		"*.{js,css,scss,sass,ts,tsx,jsx}": "prettier --write",
-		"*.js": "eslint --cache --fix",
-		"*.{js,css,md}": "prettier --write"
-	}
+		"*.{js,css,scss,sass,ts,tsx,jsx}": "prettier --write"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"browserslist": [
+		"chrome 64",
+		"edge 79",
+		"firefox 67",
+		"opera 51",
+		"safari 12"
+	]
 }
